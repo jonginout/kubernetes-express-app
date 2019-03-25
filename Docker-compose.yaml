@@ -1,0 +1,21 @@
+
+version: '3'
+
+services:
+  express-app-stg:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args: 
+        TYPE: "stg"
+    container_name: express-app-stg
+    image: jonginout/hello-world-express:stg
+
+  express-app-production:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args: 
+        TYPE: "production"
+    container_name: express-app-production
+    image: jonginout/hello-world-express:production

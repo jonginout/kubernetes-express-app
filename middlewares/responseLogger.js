@@ -36,6 +36,7 @@ const responseLogger = (req, res, next) => {
     }
 
     if(process.env.NODE_ENV == 'production') {
+        console.log(log)
         logger.info(log)
     }
 

@@ -1,7 +1,8 @@
 FROM node:10
 EXPOSE 8080
 
-ENV NODE_ENV=production
+ARG TYPE
+ENV NODE_ENV=$TYPE
 
 RUN mkdir -p /app
 COPY ./ /app/
